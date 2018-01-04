@@ -1,0 +1,40 @@
+{
+  "name": "hyper-parcel-starter",
+  "version": "0.0.1",
+  "description": "hyper and parcel boilerplate",
+  "main": "app",
+  "repository": "https://github.com/LampHeads/hyper-parcel-starter.git",
+  "author": "Tony Rewin <tony@lampheads.ru>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "cross-env NODE_ENV=development parcel index.html",
+    "build": "cross-env NODE_ENV=production parcel build index.html --public-url /"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.1",
+    "babel-preset-hyperapp": "^2.3.0",
+    "cross-env": "^5.1.3",
+    "cssnano": "^3.10.0",
+    "node-sass": "^4.7.2",
+    "parcel-bundler": "^1.4.1"
+  },
+  "dependencies": {
+    "hyperapp": "^1.0.1"
+  },
+  "postcss": {
+    "modules": false,
+    "plugins": {
+      "autoprefixer": {
+        "browsers": [
+          ">1%",
+          "last 4 versions",
+          "Firefox ESR",
+          "not ie < 9"
+        ],
+        "flexbox": "no-2009",
+        "cssnano": {}
+      }
+    }
+  }
+}
